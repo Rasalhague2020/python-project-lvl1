@@ -1,5 +1,6 @@
 import brain_games.cli
 
+
 def main():
     print('Welcome to the Brain Games!')
     print()

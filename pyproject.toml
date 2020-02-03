@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Rasalhague2020_brain_games"
-version = "0.1.0"
+version = "0.1.1"
 description = "My first Hexlet project"
 authors = ["Yury Silushkin <yusilushkin@yandex.ru>"]
 packages = [
@@ -12,6 +12,7 @@ python = "^3.7"
 prompt = "^0.4.1"
 
 [tool.poetry.dev-dependencies]
+flake8 = "^3.7.9"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
