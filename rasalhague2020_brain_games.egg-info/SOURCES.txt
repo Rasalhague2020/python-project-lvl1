@@ -2,7 +2,9 @@ pyproject.toml
 setup.py
 brain_games/__init__.py
 brain_games/cli.py
+brain_games/even.py
 brain_games/scripts/__init__.py
+brain_games/scripts/brain_even.py
 brain_games/scripts/brain_games.py
 rasalhague2020_brain_games.egg-info/PKG-INFO
 rasalhague2020_brain_games.egg-info/SOURCES.txt
