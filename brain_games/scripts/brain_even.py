@@ -1,11 +1,11 @@
 import brain_games.cli
-import brain_games.even
+import brain_games.main_loop
 
 
 def main():
     brain_games.cli.welcome_even_rules()
     user_name = brain_games.cli.welcome_user()
-    brain_games.even.even_game(user_name)
+    brain_games.main_loop.main_loop('even', user_name)
 
 
 if __name__ == '__main__':
