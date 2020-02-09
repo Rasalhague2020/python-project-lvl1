@@ -1,2 +1,5 @@
-# ignore .penv files
 .venv/
+__pycache__
+dist/
+*.pyc
+*.egg-info
