@@ -1,5 +1,6 @@
 import brain_games.games.even
 import brain_games.games.calc
+import brain_games.games.gcd
 
 
 def get_qa(game_name):
@@ -7,6 +8,8 @@ def get_qa(game_name):
         return brain_games.games.even.even_game()
     if game_name == 'calc':
         return brain_games.games.calc.calc_game()
+    if game_name == 'gcd':
+        return brain_games.games.gcd.gcd_game()
 
 
 def check_answer(game_name, question, answer):
@@ -14,6 +17,8 @@ def check_answer(game_name, question, answer):
         return brain_games.games.even.even_check(question, answer)
     if game_name == 'calc':
         return brain_games.games.calc.calc_check(question, answer)
+    if game_name == 'gcd':
+        return brain_games.games.gcd.gcd_check(question, answer)
 
 
 def main_loop(game_name, user_name):
@@ -21,6 +26,7 @@ def main_loop(game_name, user_name):
     while number_of_attempts:
         qa = get_qa(game_name)
         print('Question:', qa[0])
+
         answer = brain_games.cli.get_answer()
 
         if check_answer(game_name, qa[0], answer):
