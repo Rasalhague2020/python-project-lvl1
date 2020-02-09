@@ -27,5 +27,10 @@ def welcome_progression_rules():
           'What number is missing in the progression?\n')
 
 
+def welcome_prime_rules():
+    print('Welcome to Brain Games!\n' +
+          'Answer "yes" if given number is prime. Otherwise answer "no".\n')
+
+
 def get_answer():
     return prompt.string('Your answer: ')

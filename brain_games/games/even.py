@@ -23,23 +23,3 @@ def even_check(number, answer):
        ((answer != 'yes') and not is_even(number)):
         return True
     return False
-
-# def even_game(user_name):
-#     number_of_attempts = 3
-#     while number_of_attempts:
-#         number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
-#         print('Question:', number)
-#         answer = brain_games.cli.get_answer()
-
-#         if ((answer == 'yes') and is_even(number)) or \
-#            ((answer != 'yes') and not is_even(number)):
-#             print('Correct!\n')
-#             number_of_attempts -= 1
-#         elif answer == 'yes':
-#             print("\"yes\" is wrong answer ;(. Correct answer was " +
-#                   "\"no\". Let's try again, " + user_name + '!\n')
-#         else:
-#             print("\"no\" is wrong answer ;(. Correct answer was " +
-#                   "\"yes\". Let's try again, " + user_name + '!\n')
-
-#     print('Congratulations, ' + user_name + '!')

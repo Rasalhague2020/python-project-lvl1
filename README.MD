@@ -13,7 +13,8 @@ This set contains games such as:
 * Calc - You need to specify the correct answer for the simplest arithmetic expression three 
 times.
 * GCD - You need to specify the greates common divisor ([GCD][gcd]) for two numbers three times.
-* Progression - You need to specify the missing number in the arithmetic progression.
+* Progression - You need to specify the missing number in the arithmetic progression three times.
+* Prime - You need to specify whether the number is [prime][prime] or not three times.
 
 
 ### Installation
@@ -44,9 +45,15 @@ To start the **Progression** game, type
 $ poetry run brain-progression
 ```
 
+To start the **Prime** game, type
+```sh
+$ poetry run brain-prime
+```
+
 Installation ascinema guide and showing the game progress:
 https://asciinema.org/a/ugjvRwBYEjSVxmmcYD1ryJcw3
 
 
 [hex-py1]:<https://ru.hexlet.io/professions/python/projects/49>
 [gcd]:<https://en.wikipedia.org/wiki/Greatest_common_divisor>
+[prime]:<https://en.wikipedia.org/wiki/Prime_number>

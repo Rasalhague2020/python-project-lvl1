@@ -2,6 +2,7 @@ import brain_games.games.even
 import brain_games.games.calc
 import brain_games.games.gcd
 import brain_games.games.progression
+import brain_games.games.prime
 
 
 def get_qa(game_name):
@@ -13,6 +14,8 @@ def get_qa(game_name):
         return brain_games.games.gcd.gcd_game()
     if game_name == 'progression':
         return brain_games.games.progression.progression_game()
+    if game_name == 'prime':
+        return brain_games.games.prime.prime_game()
 
 
 def check_answer(game_name, question, answer):
@@ -25,6 +28,8 @@ def check_answer(game_name, question, answer):
     if game_name == 'progression':
         return brain_games.games.progression.\
                progression_check(question, answer)
+    if game_name == 'prime':
+        return brain_games.games.prime.prime_check(question, answer)
 
 
 def main_loop(game_name, user_name):
