@@ -22,5 +22,10 @@ def welcome_gcd_rules():
           'Find the greatest common division of given numbers.\n')
 
 
+def welcome_progression_rules():
+    print('Welcome to Brain Games!\n' +
+          'What number is missing in the progression?\n')
+
+
 def get_answer():
     return prompt.string('Your answer: ')

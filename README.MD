@@ -4,15 +4,16 @@
 
 
 This is my first Python project on the Hexlet platform.
-See details on [Hexlet site (russian language only)][hex-py1]
+See details on [Hexlet site (russian language only)][hex-py1].
 
 The first python project is a set of simple programs united by a common logic of work.
 This set contains games such as:
 
-* Even - You must specify whether the number is even or not three times.
+* Even - You need to specify whether the number is even or not three times.
 * Calc - You need to specify the correct answer for the simplest arithmetic expression three 
 times.
-* GCD - You need to specify the greates common divisor [(GCD)][gcd] for two numbers three times.
+* GCD - You need to specify the greates common divisor ([GCD][gcd]) for two numbers three times.
+* Progression - You need to specify the missing number in the arithmetic progression.
 
 
 ### Installation
@@ -23,19 +24,24 @@ To install the full game package, type
 $ make install
 ```
 
-To start the game **Even** type
+To start the **Even** game, type
 ```sh
 $ poetry run brain-even
 ```
 
-To start the game **Calc** type
+To start the **Calc** game, type
 ```sh
 $ poetry run brain-calc
 ```
 
-To start the game **GCD** type
+To start the **GCD** game, type
 ```sh
 $ poetry run brain-gcd
+```
+
+To start the **Progression** game, type
+```sh
+$ poetry run brain-progression
 ```
 
 Installation ascinema guide and showing the game progress:
