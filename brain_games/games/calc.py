@@ -6,7 +6,7 @@ MAX_RANDOM_NUMBER = 100
 OPERATORS = ['+', '-', '*']
 
 
-def calc_game():
+def get_qa_calc_game():
     expression = (str(random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER))
                   + ' '
                   + random.choice(OPERATORS)
@@ -27,7 +27,7 @@ def get_answer(expression):
     return 'error'
 
 
-def calc_check(expression, answer):
+def is_calc_answer_right(expression, answer):
     if get_answer(expression) == answer:
         return True
     return False

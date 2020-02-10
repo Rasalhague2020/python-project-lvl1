@@ -5,7 +5,7 @@ MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
 
 
-def prime_game():
+def get_qa_prime_game():
     number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     if is_prime(number):
         answer = 'yes'
@@ -14,7 +14,7 @@ def prime_game():
     return [number, answer]
 
 
-def prime_check(number, answer):
+def is_prime_answer_right(number, answer):
     if ((answer == 'yes') and is_prime(number)) or \
        ((answer != 'yes') and not is_prime(number)):
         return True

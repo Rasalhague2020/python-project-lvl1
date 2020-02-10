@@ -12,7 +12,7 @@ NUM_QUANTITY = 10
 HIDDEN_SYMBOL = '..'
 
 
-def progression_game():
+def get_qa_progression_game():
     sequence = []
     sequence.append(str(random.randint(MIN_RANDOM_NUMBER,
                                        MAX_RANDOM_NUMBER)))
@@ -29,7 +29,7 @@ def progression_game():
     return [' '.join(new_sequence), answer]
 
 
-def progression_check(string, answer):
+def is_progression_answer_right(string, answer):
     if not answer.isdigit():
         return False
     string = string.replace(HIDDEN_SYMBOL, answer)

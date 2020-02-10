@@ -7,29 +7,33 @@ import brain_games.games.prime
 
 def get_qa(game_name):
     if game_name == 'even':
-        return brain_games.games.even.even_game()
+        return brain_games.games.even.get_qa_even_game()
     if game_name == 'calc':
-        return brain_games.games.calc.calc_game()
+        return brain_games.games.calc.get_qa_calc_game()
     if game_name == 'gcd':
-        return brain_games.games.gcd.gcd_game()
+        return brain_games.games.gcd.get_qa_gcd_game()
     if game_name == 'progression':
-        return brain_games.games.progression.progression_game()
+        return brain_games.games.progression.get_qa_progression_game()
     if game_name == 'prime':
-        return brain_games.games.prime.prime_game()
+        return brain_games.games.prime.get_qa_prime_game()
 
 
 def check_answer(game_name, question, answer):
     if game_name == 'even':
-        return brain_games.games.even.even_check(question, answer)
+        return brain_games.games.even.\
+               is_even_answer_right(question, answer)
     if game_name == 'calc':
-        return brain_games.games.calc.calc_check(question, answer)
+        return brain_games.games.calc.\
+               is_calc_answer_right(question, answer)
     if game_name == 'gcd':
-        return brain_games.games.gcd.gcd_check(question, answer)
+        return brain_games.games.gcd.\
+               is_gcd_answer_right(question, answer)
     if game_name == 'progression':
         return brain_games.games.progression.\
-               progression_check(question, answer)
+               is_progression_answer_right(question, answer)
     if game_name == 'prime':
-        return brain_games.games.prime.prime_check(question, answer)
+        return brain_games.games.prime.\
+               is_prime_answer_right(question, answer)
 
 
 def main_loop(game_name, user_name):
