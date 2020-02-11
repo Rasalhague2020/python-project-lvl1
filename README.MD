@@ -50,8 +50,8 @@ To start the **Prime** game, type
 $ poetry run brain-prime
 ```
 
-Installation ascinema guide and showing the game progress:
-https://asciinema.org/a/ugjvRwBYEjSVxmmcYD1ryJcw3
+Installation guide and showing the games progress:
+[![asciicast](https://asciinema.org/a/Ot0p5LFsPkGfjLkAJM4XNP4GU.svg)](https://asciinema.org/a/Ot0p5LFsPkGfjLkAJM4XNP4GU)
 
 
 [hex-py1]:<https://ru.hexlet.io/professions/python/projects/49>
