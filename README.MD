@@ -68,7 +68,7 @@ The process of installation and playing:
 
 ### Delete package
 
-After getting a lot of fun from the process of playing these little puzzles you could easily delete this package just by deleting your virtual enviroment directory.
+After getting a lot of fun (of course you do!) from the process of playing these little puzzles you could easily delete this package just by deleting your virtual enviroment directory.
 For instance in our case just type
 ```sh
 (brain_games_env)$ deactivate
@@ -81,5 +81,3 @@ $ rm -r brain_games_env/
 [hex-py1]:<https://ru.hexlet.io/professions/python/projects/49>
 [gcd]:<https://en.wikipedia.org/wiki/Greatest_common_divisor>
 [prime]:<https://en.wikipedia.org/wiki/Prime_number>
-
-*[fun]: Of course you do!
