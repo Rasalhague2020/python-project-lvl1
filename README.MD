@@ -19,41 +19,67 @@ times.
 
 ### Installation
 
-
+First of all you should create virtual enviroment via `venv`
+```sh
+$ python3 -m venv brain_games_env
+```
+and than activate this enviroment by
+```sh
+$ source brain_games_env/bin/activate
+```
+This will allow you to install package in an isolated location and you can easily delete this package in the future. 
 To install the full game package, type
 ```sh
-$ make install
+(brain_games_env)$ pip install -i https://test.pypi.org/simple/ Rasalhague2020_brain_games --extra-index-url https://pypi.org/simple/
 ```
+When the package `Rasalhague2020_brain_games` is installed in your virtual enviroment you will be able to run games using the built-in scripts.
+
+### Running games
 
 To start the **Even** game, type
 ```sh
-$ poetry run brain-even
+(brain_games_env)$ brain-even
 ```
 
 To start the **Calc** game, type
 ```sh
-$ poetry run brain-calc
+(brain_games_env)$ brain-calc
 ```
 
 To start the **GCD** game, type
 ```sh
-$ poetry run brain-gcd
+(brain_games_env)$ brain-gcd
 ```
 
 To start the **Progression** game, type
 ```sh
-$ poetry run brain-progression
+(brain_games_env)$ brain-progression
 ```
 
 To start the **Prime** game, type
 ```sh
-$ poetry run brain-prime
+(brain_games_env)$ brain-prime
 ```
 
-Installation guide and showing the games progress:
+### Video tutorial
+
+The process of installation and playing:
 [![asciicast](https://asciinema.org/a/Ot0p5LFsPkGfjLkAJM4XNP4GU.svg)](https://asciinema.org/a/Ot0p5LFsPkGfjLkAJM4XNP4GU)
 
+### Delete package
+
+After getting a lot of fun from the process of playing these little puzzles you could easily delete this package just by deleting your virtual enviroment directory.
+For instance in our case just type
+```sh
+(brain_games_env)$ deactivate
+```
+and than delete `brain_games_env` directory
+```sh
+$ rm -r brain_games_env/
+```
 
 [hex-py1]:<https://ru.hexlet.io/professions/python/projects/49>
 [gcd]:<https://en.wikipedia.org/wiki/Greatest_common_divisor>
 [prime]:<https://en.wikipedia.org/wiki/Prime_number>
+
+*[fun]: Of course you do!
