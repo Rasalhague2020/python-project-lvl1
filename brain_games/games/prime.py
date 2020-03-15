@@ -22,7 +22,10 @@ def is_prime_answer_right(number, answer):
 
 
 def is_prime(number):
-    for i in range(2, number // 2):
-        if number % i == 0:
-            return False
-    return True
+    if number > 1:
+        for i in range(2, (number // 2) + 1):
+            if number % i == 0:
+                break
+        else:
+            return True
+    return False
