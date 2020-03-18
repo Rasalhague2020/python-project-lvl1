@@ -10,16 +10,16 @@ def is_even(number):
 
 
 def get_qa_even_game():
-    number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
-    if is_even(number):
+    question = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
+    if is_even(question):
         answer = 'yes'
     else:
         answer = 'no'
-    return [number, answer]
+    return [question, answer]
 
 
-def is_even_answer_right(number, answer):
-    if ((answer == 'yes') and is_even(number)) or \
-       ((answer != 'yes') and not is_even(number)):
+def is_even_answer_right(question, answer):
+    if ((answer == 'yes') and is_even(question)) or \
+       ((answer != 'yes') and not is_even(question)):
         return True
     return False
