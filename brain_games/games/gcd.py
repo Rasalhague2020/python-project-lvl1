@@ -8,8 +8,9 @@ MAX_RANDOM_NUMBER = 100
 def get_qa_gcd_game():
     num1 = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     num2 = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
-    return [str(num1) + ' ' + str(num2),
-            str(get_gcd(max(num1, num2), min(num1, num2)))]
+    question = str(num1) + ' ' + str(num2)
+    answer = str(get_gcd(max(num1, num2), min(num1, num2)))
+    return [question, answer]
 
 
 def is_gcd_answer_right(numbers, answer):
