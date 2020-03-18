@@ -14,12 +14,11 @@ HIDDEN_SYMBOL = '..'
 
 def get_qa_progression_game():
     sequence = []
-    sequence.append(str(random.randint(MIN_RANDOM_NUMBER,
-                                       MAX_RANDOM_NUMBER)))
+    start = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     step = random.randint(MIN_STEP, MAX_STEP)
 
     for i in range(NUM_QUANTITY - 1):
-        sequence.append(str(int(sequence[i]) + step))
+        sequence.append(str(start + step*i))
 
     answer = random.choice(sequence)
     new_sequence = sequence[:sequence.index(answer)]
