@@ -1,24 +1,20 @@
 import random
+import brain_games.cli
+import brain_games.main_loop
 
 
+RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".\n'
 MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
 
 
-def get_qa_prime_game():
+def get_prime_question_and_answer():
     number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     if is_prime(number):
         answer = 'yes'
     else:
         answer = 'no'
     return [number, answer]
-
-
-def is_prime_answer_right(number, answer):
-    if ((answer == 'yes') and is_prime(number)) or \
-       ((answer != 'yes') and not is_prime(number)):
-        return True
-    return False
 
 
 def is_prime(number):
@@ -29,3 +25,12 @@ def is_prime(number):
         else:
             return True
     return False
+
+
+def start_prime_game():
+    attempts = 3
+    user_name = brain_games.cli.welcome_user(RULES)
+    while attempts:
+        question, answer = get_prime_question_and_answer()
+        attempts = brain_games.main_loop.game_engine(question, answer,
+                                                     user_name, attempts)

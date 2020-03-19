@@ -1,36 +1,29 @@
 import prompt
 
 
-def welcome_user():
-    name = prompt.string('May I have your name? ')
+def welcome_user(rules=''):
+    print('Welcome to Brain Games!')
+    if rules:
+        print(rules)
+    name = prompt.string('\nMay I have your name? ')
     print('Hello, ' + name + '!\n')
     return name
 
 
-def welcome_even_rules():
-    print('Welcome to Brain Games!\n' +
-          'Answer "yes" if number even otherwise answer "no".\n')
-
-
-def welcome_calc_rules():
-    print('Welcome to Brain Games!\n' +
-          'What is the result of the expression?\n')
-
-
-def welcome_gcd_rules():
-    print('Welcome to Brain Games!\n' +
-          'Find the greatest common division of given numbers.\n')
-
-
-def welcome_progression_rules():
-    print('Welcome to Brain Games!\n' +
-          'What number is missing in the progression?\n')
-
-
-def welcome_prime_rules():
-    print('Welcome to Brain Games!\n' +
-          'Answer "yes" if given number is prime. Otherwise answer "no".\n')
-
-
-def get_answer():
+def get_answer_on_question(question):
+    print('Question:', question)
     return prompt.string('Your answer: ')
+
+
+def correct_message():
+    print('Correct!\n')
+
+
+def wrong_message(user_answer, right_answer, user_name):
+    print('\"' + user_answer + '\" is wrong answer ;(. ' +
+          'Correct answer was \"' + right_answer + '\". ' +
+          'Let\'s try again, ' + user_name + '!\n')
+
+
+def congrats_message(user_name):
+    print('Congratulations, ' + user_name + '!')

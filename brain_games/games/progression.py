@@ -1,6 +1,9 @@
 import random
+import brain_games.cli
+import brain_games.main_loop
 
 
+RULES = 'What number is missing in the progression?\n'
 MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
 
@@ -12,7 +15,7 @@ NUM_QUANTITY = 10
 HIDDEN_SYMBOL = '..'
 
 
-def get_qa_progression_game():
+def get_progression_question_and_answer():
     sequence = []
     start = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     step = random.randint(MIN_STEP, MAX_STEP)
@@ -28,15 +31,10 @@ def get_qa_progression_game():
     return [' '.join(new_sequence), answer]
 
 
-def is_progression_answer_right(string, answer):
-    if not answer.isdigit():
-        return False
-    string = string.replace(HIDDEN_SYMBOL, answer)
-    sequence = string.split()
-
-    step = int(sequence[1]) - int(sequence[0])
-
-    for i in range(len(sequence) - 1):
-        if int(sequence[i+1]) - int(sequence[i]) != step:
-            return False
-    return True
+def start_progression_game():
+    attempts = 3
+    user_name = brain_games.cli.welcome_user(RULES)
+    while attempts:
+        question, answer = get_progression_question_and_answer()
+        attempts = brain_games.main_loop.game_engine(question, answer,
+                                                     user_name, attempts)

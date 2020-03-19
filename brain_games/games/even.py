@@ -1,6 +1,9 @@
 import random
+import brain_games.cli
+import brain_games.main_loop
 
 
+RULES = 'Answer "yes" if number even otherwise answer "no".'
 MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
 
@@ -9,17 +12,19 @@ def is_even(number):
     return not number % 2
 
 
-def get_qa_even_game():
+def get_even_question_and_answer():
     question = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     if is_even(question):
         answer = 'yes'
     else:
         answer = 'no'
-    return [question, answer]
+    return [str(question), answer]
 
 
-def is_even_answer_right(question, answer):
-    if ((answer == 'yes') and is_even(question)) or \
-       ((answer != 'yes') and not is_even(question)):
-        return True
-    return False
+def start_even_game():
+    attempts = 3
+    user_name = brain_games.cli.welcome_user(RULES)
+    while attempts:
+        question, answer = get_even_question_and_answer()
+        attempts = brain_games.main_loop.game_engine(question, answer,
+                                                     user_name, attempts)

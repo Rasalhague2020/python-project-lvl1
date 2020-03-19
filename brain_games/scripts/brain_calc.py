@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 
-import brain_games.cli
-import brain_games.main_loop
+# import brain_games.cli
+# import brain_games.main_loop
+
+import brain_games.games.calc
 
 
 def main():
-    brain_games.cli.welcome_calc_rules()
-    user_name = brain_games.cli.welcome_user()
-    brain_games.main_loop.main_loop('calc', user_name)
+    brain_games.games.calc.start_calc_game()
+
+    # brain_games.cli.welcome_calc_rules()
+    # user_name = brain_games.cli.welcome_user()
+    # brain_games.main_loop.main_loop('calc', user_name)
 
 
 if __name__ == '__main__':
