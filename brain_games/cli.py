@@ -11,6 +11,7 @@ def get_user_name():
     name = prompt.string('May I have your name? ')
     return name
 
+
 def user_greetings(name):
     print('Hello, ' + name + '!\n')
 
