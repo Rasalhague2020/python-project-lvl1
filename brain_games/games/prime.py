@@ -9,12 +9,12 @@ MAX_RANDOM_NUMBER = 100
 
 
 def get_prime_question_and_answer():
-    number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
-    if is_prime(number):
+    question = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
+    if is_prime(question):
         answer = 'yes'
     else:
         answer = 'no'
-    return [number, answer]
+    return [question, answer]
 
 
 def is_prime(number):
@@ -29,7 +29,9 @@ def is_prime(number):
 
 def start_prime_game():
     attempts = 3
-    user_name = brain_games.cli.welcome_user(RULES)
+    brain_games.cli.opening_greetings_and_rules(RULES)
+    user_name = brain_games.cli.get_user_name()
+    brain_games.cli.user_greetings(user_name)
     while attempts:
         question, answer = get_prime_question_and_answer()
         attempts = brain_games.main_loop.game_engine(question, answer,

@@ -1,13 +1,18 @@
 import prompt
 
 
-def welcome_user(rules=''):
+def opening_greetings_and_rules(rules=''):
     print('Welcome to Brain Games!')
     if rules:
         print(rules)
-    name = prompt.string('\nMay I have your name? ')
-    print('Hello, ' + name + '!\n')
+
+
+def get_user_name():
+    name = prompt.string('May I have your name? ')
     return name
+
+def user_greetings(name):
+    print('Hello, ' + name + '!\n')
 
 
 def get_answer_on_question(question):

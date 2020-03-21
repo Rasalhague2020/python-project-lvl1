@@ -30,7 +30,9 @@ def get_answer(first_number, second_number, operator):
 
 def start_calc_game():
     attempts = 3
-    user_name = brain_games.cli.welcome_user(RULES)
+    brain_games.cli.opening_greetings_and_rules(RULES)
+    user_name = brain_games.cli.get_user_name()
+    brain_games.cli.user_greetings(user_name)
     while attempts:
         question, answer = get_calc_question_and_answer()
         attempts = brain_games.main_loop.game_engine(question, answer,
