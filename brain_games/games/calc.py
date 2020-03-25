@@ -14,7 +14,7 @@ def get_calc_question_and_answer():
     second_number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     operator = random.choice(OPERATORS)
     answer = get_answer(first_number, second_number, operator)
-    question = str(first_number) + ' ' + operator + ' ' + str(second_number)
+    question = f'{first_number} {operator} {second_number}'
     return [question, str(answer)]
 
 
