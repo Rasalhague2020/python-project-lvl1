@@ -1,4 +1,8 @@
 import random
+from operator import add
+from operator import sub
+from operator import mul
+
 import brain_games.cli
 import brain_games.main_loop
 
@@ -20,11 +24,11 @@ def get_calc_question_and_answer():
 
 def get_answer(first_number, second_number, operator):
     if operator == OPERATORS[0]:
-        return first_number + second_number
+        return add(first_number, second_number)
     if operator == OPERATORS[1]:
-        return first_number - second_number
+        return sub(first_number, second_number)
     if operator == OPERATORS[2]:
-        return first_number * second_number
+        return mul(first_number, second_number)
     return None
 
 
