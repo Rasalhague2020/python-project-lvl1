@@ -3,7 +3,7 @@ import brain_games.cli
 import brain_games.main_loop
 
 
-RULES = 'Answer "yes" if number even otherwise answer "no".'
+RULES = 'Answer "yes" if number even otherwise answer "no".\n'
 MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
 
