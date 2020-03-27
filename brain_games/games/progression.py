@@ -28,7 +28,7 @@ def get_progression_question_and_answer():
     new_sequence.append(HIDDEN_SYMBOL)
     new_sequence += sequence[sequence.index(answer) + 1:]
 
-    return [' '.join(new_sequence), answer]
+    return ' '.join(new_sequence), answer
 
 
 def start_progression_game():

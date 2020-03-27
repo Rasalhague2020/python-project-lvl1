@@ -14,7 +14,7 @@ def get_prime_question_and_answer():
         answer = 'yes'
     else:
         answer = 'no'
-    return [question, answer]
+    return question, answer
 
 
 def is_prime(number):

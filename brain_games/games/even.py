@@ -18,7 +18,7 @@ def get_even_question_and_answer():
         answer = 'yes'
     else:
         answer = 'no'
-    return [str(question), answer]
+    return str(question), answer
 
 
 def start_even_game():

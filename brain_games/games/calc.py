@@ -19,7 +19,7 @@ def get_calc_question_and_answer():
     operator = random.choice(OPERATORS)
     answer = get_answer(first_number, second_number, operator)
     question = f'{first_number} {operator} {second_number}'
-    return [question, str(answer)]
+    return question, str(answer)
 
 
 def get_answer(first_number, second_number, operator):

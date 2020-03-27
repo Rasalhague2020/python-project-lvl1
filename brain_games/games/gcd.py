@@ -13,7 +13,7 @@ def get_gcd_question_and_answer():
     num2 = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     question = f'{num1} {num2}'
     answer = str(get_gcd(max(num1, num2), min(num1, num2)))
-    return [question, answer]
+    return question, answer
 
 
 def get_gcd(a, b):
