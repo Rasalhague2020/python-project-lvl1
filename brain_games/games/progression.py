@@ -1,6 +1,5 @@
 import random
 
-import brain_games.cli
 import brain_games.main_loop
 
 
@@ -33,11 +32,5 @@ def get_progression_question_and_answer():
 
 
 def start_progression_game():
-    attempts = 3
-    brain_games.cli.opening_greetings_and_rules(RULES)
-    user_name = brain_games.cli.get_user_name()
-    brain_games.cli.user_greetings(user_name)
-    while attempts:
-        question, answer = get_progression_question_and_answer()
-        attempts = brain_games.main_loop.game_engine(question, answer,
-                                                     user_name, attempts)
+    brain_games.main_loop.game_engine(get_progression_question_and_answer,
+                                      RULES)

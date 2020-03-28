@@ -1,13 +1,27 @@
-import brain_games.cli
+import prompt
 
 
-def game_engine(question, right_answer, user_name, attempts):
-    user_answer = brain_games.cli.get_answer_on_question(question)
-    if user_answer == right_answer:
-        brain_games.cli.correct_message()
-        attempts -= 1
-    else:
-        brain_games.cli.wrong_message(user_answer, right_answer, user_name)
-    if attempts == 0:
-        brain_games.cli.congrats_message(user_name)
-    return attempts
+def game_engine(get_game_question_and_answer=None, rules=''):
+    attempts = 3
+
+    print('Welcome to Brain Games!')
+    print(rules)
+    user_name = prompt.string('May I have your name? ')
+    print('Hello, ' + user_name + '!\n')
+
+    if not rules:
+        quit()
+
+    while attempts:
+        question, right_answer = get_game_question_and_answer()
+        print('Question:', question)
+        user_answer = prompt.string('Your answer: ')
+
+        if user_answer == right_answer:
+            print('Correct!\n')
+            attempts -= 1
+        else:
+            print('\"' + user_answer + '\" is wrong answer ;(. ' +
+                  'Correct answer was \"' + right_answer + '\". ' +
+                  'Let\'s try again, ' + user_name + '!\n')
+    print('Congratulations, ' + user_name + '!')
