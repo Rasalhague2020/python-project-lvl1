@@ -7,7 +7,7 @@ def game_engine(get_game_question_and_answer=None, rules=''):
     print('Welcome to Brain Games!')
     print(rules)
     user_name = prompt.string('May I have your name? ')
-    print('Hello, ' + user_name + '!\n')
+    print(f'Hello, {user_name}!\n')
 
     if not rules:
         quit()
@@ -21,7 +21,7 @@ def game_engine(get_game_question_and_answer=None, rules=''):
             print('Correct!\n')
             attempts -= 1
         else:
-            print('\"' + user_answer + '\" is wrong answer ;(. ' +
-                  'Correct answer was \"' + right_answer + '\". ' +
-                  'Let\'s try again, ' + user_name + '!\n')
-    print('Congratulations, ' + user_name + '!')
+            print(f'\"{user_answer}\" is wrong answer ;(. '
+                  f'Correct answer was \"{right_answer}\". '
+                  f'Let\'s try again, {user_name}!\n')
+    print(f'Congratulations, {user_name}!')
