@@ -21,11 +21,11 @@ def get_calc_question_and_answer():
 
 
 def get_answer(first_number, second_number, calc_operator):
-    if calc_operator == OPERATORS[0]:
+    if calc_operator == '+':
         return operator.add(first_number, second_number)
-    if calc_operator == OPERATORS[1]:
+    if calc_operator == '-':
         return operator.sub(first_number, second_number)
-    if calc_operator == OPERATORS[2]:
+    if calc_operator == '*':
         return operator.mul(first_number, second_number)
     return None
 
