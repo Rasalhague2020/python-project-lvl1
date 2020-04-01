@@ -12,8 +12,6 @@ MAX_STEP = 10
 
 NUM_QUANTITY = 10
 
-HIDDEN_SYMBOL = '..'
-
 
 def get_progression_question_and_answer():
     sequence = []
@@ -25,7 +23,7 @@ def get_progression_question_and_answer():
 
     answer = random.choice(sequence)
     new_sequence = sequence[:sequence.index(answer)]
-    new_sequence.append(HIDDEN_SYMBOL)
+    new_sequence.append('..')
     new_sequence += sequence[sequence.index(answer) + 1:]
 
     return ' '.join(new_sequence), answer
