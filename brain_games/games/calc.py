@@ -6,7 +6,7 @@ from operator import mul
 import brain_games.main_loop
 
 
-RULES = 'What is the result of the expression?\n'
+DESCRIPTION = 'What is the result of the expression?\n'
 MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
 OPERATORS = ['+', '-', '*']
@@ -33,4 +33,5 @@ def get_answer(first_number, second_number, operator):
 
 
 def start_calc_game():
-    brain_games.main_loop.game_engine(get_calc_question_and_answer, RULES)
+    brain_games.main_loop.game_engine(get_calc_question_and_answer,
+                                      DESCRIPTION)

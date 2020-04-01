@@ -1,15 +1,15 @@
 import prompt
 
 
-def game_engine(get_game_question_and_answer=None, rules=''):
+def game_engine(get_game_question_and_answer=None, description=''):
     attempts = 3
 
     print('Welcome to Brain Games!')
-    print(rules)
+    print(description)
     user_name = prompt.string('May I have your name? ')
     print(f'Hello, {user_name}!\n')
 
-    if not rules:
+    if not description:
         quit()
 
     while attempts:

@@ -3,7 +3,7 @@ import random
 import brain_games.main_loop
 
 
-RULES = 'Find the greatest common division of given numbers.\n'
+DESCRIPTION = 'Find the greatest common division of given numbers.\n'
 MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
 
@@ -24,4 +24,5 @@ def get_gcd(a, b):
 
 
 def start_gcd_game():
-    brain_games.main_loop.game_engine(get_gcd_question_and_answer, RULES)
+    brain_games.main_loop.game_engine(get_gcd_question_and_answer,
+                                      DESCRIPTION)
