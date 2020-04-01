@@ -2,7 +2,7 @@ import prompt
 
 
 def game_engine(get_game_question_and_answer=None, description=''):
-    attempts = 3
+    attempts_count = 3
 
     print('Welcome to Brain Games!')
     print(f'{description}\n')
@@ -12,14 +12,14 @@ def game_engine(get_game_question_and_answer=None, description=''):
     if not description:
         quit()
 
-    while attempts:
+    while attempts_count:
         question, right_answer = get_game_question_and_answer()
         print('Question:', question)
         user_answer = prompt.string('Your answer: ')
 
         if user_answer == right_answer:
             print('Correct!\n')
-            attempts -= 1
+            attempts_count -= 1
         else:
             print(f'\"{user_answer}\" is wrong answer ;(. '
                   f'Correct answer was \"{right_answer}\". '
