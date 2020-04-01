@@ -1,7 +1,5 @@
 import random
-from operator import add
-from operator import sub
-from operator import mul
+import operator
 
 import brain_games.main_loop
 
@@ -15,20 +13,20 @@ OPERATORS = ['+', '-', '*']
 def get_calc_question_and_answer():
     first_number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     second_number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
-    operator = random.choice(OPERATORS)
+    calc_operator = random.choice(OPERATORS)
 
-    answer = get_answer(first_number, second_number, operator)
-    question = f'{first_number} {operator} {second_number}'
+    answer = get_answer(first_number, second_number, calc_operator)
+    question = f'{first_number} {calc_operator} {second_number}'
     return question, str(answer)
 
 
-def get_answer(first_number, second_number, operator):
-    if operator == OPERATORS[0]:
-        return add(first_number, second_number)
-    if operator == OPERATORS[1]:
-        return sub(first_number, second_number)
-    if operator == OPERATORS[2]:
-        return mul(first_number, second_number)
+def get_answer(first_number, second_number, calc_operator):
+    if calc_operator == OPERATORS[0]:
+        return operator.add(first_number, second_number)
+    if calc_operator == OPERATORS[1]:
+        return operator.sub(first_number, second_number)
+    if calc_operator == OPERATORS[2]:
+        return operator.mul(first_number, second_number)
     return None
 
 
