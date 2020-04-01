@@ -22,11 +22,11 @@ def get_progression_question_and_answer():
         sequence.append(str(start + step*i))
 
     answer = random.choice(sequence)
-    new_sequence = sequence[:sequence.index(answer)]
-    new_sequence.append('..')
-    new_sequence += sequence[sequence.index(answer) + 1:]
-
-    return ' '.join(new_sequence), answer
+    question = sequence[:sequence.index(answer)]
+    question.append('..')
+    question += sequence[sequence.index(answer) + 1:]
+    question = ' '.join(question)
+    return question, answer
 
 
 def start_progression_game():
