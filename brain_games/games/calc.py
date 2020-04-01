@@ -6,7 +6,7 @@ from operator import mul
 import brain_games.main_loop
 
 
-DESCRIPTION = 'What is the result of the expression?\n'
+DESCRIPTION = 'What is the result of the expression?'
 MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
 OPERATORS = ['+', '-', '*']

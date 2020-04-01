@@ -3,7 +3,7 @@ import random
 import brain_games.main_loop
 
 
-DESCRIPTION = 'What number is missing in the progression?\n'
+DESCRIPTION = 'What number is missing in the progression?'
 MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
 

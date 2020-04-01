@@ -3,7 +3,7 @@ import random
 import brain_games.main_loop
 
 
-DESCRIPTION = 'Find the greatest common division of given numbers.\n'
+DESCRIPTION = 'Find the greatest common division of given numbers.'
 MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
 

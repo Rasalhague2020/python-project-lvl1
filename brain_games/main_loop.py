@@ -5,7 +5,7 @@ def game_engine(get_game_question_and_answer=None, description=''):
     attempts = 3
 
     print('Welcome to Brain Games!')
-    print(description)
+    print(f'{description}\n')
     user_name = prompt.string('May I have your name? ')
     print(f'Hello, {user_name}!\n')
 

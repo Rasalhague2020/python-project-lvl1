@@ -3,7 +3,7 @@ import random
 import brain_games.main_loop
 
 
-DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".\n'
+DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
 
