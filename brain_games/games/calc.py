@@ -1,7 +1,7 @@
 import random
 import operator
 
-import brain_games.main_loop
+from brain_games import engine
 
 
 DESCRIPTION = 'What is the result of the expression?'
@@ -31,5 +31,4 @@ def get_answer(first_number, second_number, calc_operator):
 
 
 def start_calc_game():
-    brain_games.main_loop.game_engine(get_calc_question_and_answer,
-                                      DESCRIPTION)
+    engine.play(get_calc_question_and_answer, DESCRIPTION)

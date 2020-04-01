@@ -1,7 +1,7 @@
 import prompt
 
 
-def game_engine(get_game_question_and_answer=None, description=''):
+def play(get_game_question_and_answer=None, description=''):
     attempts_count = 3
 
     print('Welcome to Brain Games!')

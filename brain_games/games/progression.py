@@ -1,6 +1,6 @@
 import random
 
-import brain_games.main_loop
+from brain_games import engine
 
 
 DESCRIPTION = 'What number is missing in the progression?'
@@ -30,5 +30,4 @@ def get_progression_question_and_answer():
 
 
 def start_progression_game():
-    brain_games.main_loop.game_engine(get_progression_question_and_answer,
-                                      DESCRIPTION)
+    engine.play(get_progression_question_and_answer, DESCRIPTION)

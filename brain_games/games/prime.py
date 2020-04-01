@@ -1,6 +1,6 @@
 import random
 
-import brain_games.main_loop
+from brain_games import engine
 
 
 DESCRIPTION = ('Answer "yes" if given number is prime. '
@@ -29,5 +29,4 @@ def is_prime(number):
 
 
 def start_prime_game():
-    brain_games.main_loop.game_engine(get_prime_question_and_answer,
-                                      DESCRIPTION)
+    engine.play(get_prime_question_and_answer, DESCRIPTION)

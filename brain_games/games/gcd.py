@@ -1,6 +1,6 @@
 import random
 
-import brain_games.main_loop
+from brain_games import engine
 
 
 DESCRIPTION = 'Find the greatest common division of given numbers.'
@@ -24,5 +24,4 @@ def get_gcd(a, b):
 
 
 def start_gcd_game():
-    brain_games.main_loop.game_engine(get_gcd_question_and_answer,
-                                      DESCRIPTION)
+    engine.play(get_gcd_question_and_answer, DESCRIPTION)

@@ -1,6 +1,6 @@
 import random
 
-import brain_games.main_loop
+from brain_games import engine
 
 
 DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
@@ -22,5 +22,4 @@ def get_even_question_and_answer():
 
 
 def start_even_game():
-    brain_games.main_loop.game_engine(get_even_question_and_answer,
-                                      DESCRIPTION)
+    engine.play(get_even_question_and_answer, DESCRIPTION)
