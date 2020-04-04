@@ -15,12 +15,12 @@ def get_calc_question_and_answer():
     second_number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     sign = random.choice(OPERATORS)
 
-    answer = get_answer(first_number, second_number, sign)
+    answer = calculate(first_number, second_number, sign)
     question = f'{first_number} {sign} {second_number}'
     return question, str(answer)
 
 
-def get_answer(first_number, second_number, sign):
+def calculate(first_number, second_number, sign):
     if sign == '+':
         return operator.add(first_number, second_number)
     if sign == '-':
