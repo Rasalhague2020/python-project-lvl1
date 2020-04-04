@@ -13,19 +13,19 @@ OPERATORS = ['+', '-', '*']
 def get_calc_question_and_answer():
     first_number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     second_number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
-    calc_operator = random.choice(OPERATORS)
+    sign = random.choice(OPERATORS)
 
-    answer = get_answer(first_number, second_number, calc_operator)
-    question = f'{first_number} {calc_operator} {second_number}'
+    answer = get_answer(first_number, second_number, sign)
+    question = f'{first_number} {sign} {second_number}'
     return question, str(answer)
 
 
-def get_answer(first_number, second_number, calc_operator):
-    if calc_operator == '+':
+def get_answer(first_number, second_number, sign):
+    if sign == '+':
         return operator.add(first_number, second_number)
-    if calc_operator == '-':
+    if sign == '-':
         return operator.sub(first_number, second_number)
-    if calc_operator == '*':
+    if sign == '*':
         return operator.mul(first_number, second_number)
     return None
 
