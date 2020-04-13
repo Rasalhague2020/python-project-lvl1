@@ -1,8 +1,11 @@
 import prompt
 
 
+attempts_count = 3
+
+
 def play(get_game_question_and_answer, description):
-    attempts_count = 3
+    global attempts_count
 
     print('Welcome to Brain Games!')
     print(f'{description}\n')
