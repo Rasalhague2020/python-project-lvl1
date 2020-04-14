@@ -1,18 +1,18 @@
 import prompt
 
 
-attempts_count = 3
+ATTEMPTS_COUNT = 3
 
 
 def play(get_game_question_and_answer, description):
-    global attempts_count
+    global ATTEMPTS_COUNT
 
     print('Welcome to Brain Games!')
     print(f'{description}\n')
     user_name = prompt.string('May I have your name? ')
     print(f'Hello, {user_name}!\n')
 
-    while attempts_count:
+    while ATTEMPTS_COUNT:
         question, right_answer = get_game_question_and_answer()
         print('Question:', question)
         user_answer = prompt.string('Your answer: ')
@@ -23,6 +23,6 @@ def play(get_game_question_and_answer, description):
                   f'Let\'s try again, {user_name}!\n')
             continue
         print('Correct!\n')
-        attempts_count -= 1
+        ATTEMPTS_COUNT -= 1
 
     print(f'Congratulations, {user_name}!')
