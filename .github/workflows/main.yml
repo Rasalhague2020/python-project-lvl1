@@ -1,0 +1,27 @@
+name: Brain games application
+
+on: [push]
+
+jobs:
+  build-game:
+
+    runs-on: ubuntu-latest
+
+    strps:
+      - uses: action/checkout@v2
+
+      - name: Set up Python
+        uses: action/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install poetry
+
+      - name: Install Brain games
+        run: make install
+
+      - name: Linter test
+        run: make lint
