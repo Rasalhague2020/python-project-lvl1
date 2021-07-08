@@ -8,6 +8,8 @@ brain-games:
 	poetry run brain-games
 
 build:
+	rm ./dist/*.whl
+	rm ./dist/*.gz
 	poetry build
 
 publish:
