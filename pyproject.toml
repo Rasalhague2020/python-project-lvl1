@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.8.0"
+version = "0.9.0"
 description = "Just a set of simple programs united by a common logic of work."
 authors = ["Yury Silushkin <yusilushkin@yandex.ru>"]
 classifiers = [
