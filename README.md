@@ -22,64 +22,53 @@ times.
 
 ### Installation
 
-First of all you should create virtual enviroment via `venv`
-```sh
-$ python3 -m venv brain_games_env
-```
-and than activate this enviroment by
-```sh
-$ source brain_games_env/bin/activate
-```
-This will allow you to install package in an isolated location and you can easily delete this package in the future. 
 To install the full game package, type
 ```sh
-(brain_games_env)$ pip install -i https://test.pypi.org/simple/ Rasalhague2020_brain_games --extra-index-url https://pypi.org/simple/
+$ python3 -m pip install --user git+https://github.com/Rasalhague2020/python-project-lvl1.git
 ```
-When the package `Rasalhague2020_brain_games` is installed in your virtual enviroment you will be able to run games using the built-in scripts.
+When the package `hexlet-code` is installed will be able to run games using the built-in scripts.
 
 ### Running games
 
 To start the **Even** game, type
 ```sh
-(brain_games_env)$ brain-even
+$ brain-even
 ```
 
 To start the **Calc** game, type
 ```sh
-(brain_games_env)$ brain-calc
+$ brain-calc
 ```
 
 To start the **GCD** game, type
 ```sh
-(brain_games_env)$ brain-gcd
+$ brain-gcd
 ```
 
 To start the **Progression** game, type
 ```sh
-(brain_games_env)$ brain-progression
+$ brain-progression
 ```
 
 To start the **Prime** game, type
 ```sh
-(brain_games_env)$ brain-prime
+$ brain-prime
 ```
 
 ### Video tutorial
 
 The process of installation and playing:
-[![asciicast](https://asciinema.org/a/Ot0p5LFsPkGfjLkAJM4XNP4GU.svg)](https://asciinema.org/a/Ot0p5LFsPkGfjLkAJM4XNP4GU)
+[![asciicast](https://asciinema.org/a/v7J4p7nv8PjFKQPL22asg5j7e.svg)](https://asciinema.org/a/v7J4p7nv8PjFKQPL22asg5j7e)
 
 ### Delete package
 
-After getting a lot of fun (of course you do!) from the process of playing these little puzzles you could easily delete this package just by deleting your virtual enviroment directory.
-For instance in our case just type
+After getting a lot of fun (of course you do!) from the process of playing these little puzzles you could easily delete this package.
+
+Just type
 ```sh
-(brain_games_env)$ deactivate
+$ python3 -m pip uninstall hexlet-code
 ```
-and than delete `brain_games_env` directory
-```sh
-$ rm -r brain_games_env/
-```
+
 
 [hex-py1]:<https://ru.hexlet.io/professions/python/projects/49>
 [gcd]:<https://en.wikipedia.org/wiki/Greatest_common_divisor>
