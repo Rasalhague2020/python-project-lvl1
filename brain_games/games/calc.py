@@ -7,10 +7,6 @@ MAX_RANDOM_NUMBER = 100
 OPERATORS = ['+', '-', '*']
 
 
-def get_description():
-    return DESCRIPTION
-
-
 def get_calc_question_and_answer():
     first_number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     second_number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)

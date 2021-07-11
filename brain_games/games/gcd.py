@@ -6,10 +6,6 @@ MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
 
 
-def get_description():
-    return DESCRIPTION
-
-
 def get_gcd_question_and_answer():
     num1 = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     num2 = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)

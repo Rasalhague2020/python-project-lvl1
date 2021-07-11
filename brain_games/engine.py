@@ -4,11 +4,11 @@ import prompt
 ATTEMPTS_COUNT = 3
 
 
-def play(get_game_question_and_answer, get_description):
+def play(get_game_question_and_answer, description):
     current_attempts_count = 0
 
     print('Welcome to Brain Games!')
-    print(f'{get_description()}\n')
+    print(f'{description}\n')
     user_name = prompt.string('May I have your name? ')
     print(f'Hello, {user_name}!\n')
 

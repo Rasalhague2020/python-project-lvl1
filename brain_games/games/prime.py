@@ -7,10 +7,6 @@ MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
 
 
-def get_description():
-    return DESCRIPTION
-
-
 def get_prime_question_and_answer():
     question = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     if is_prime(question):

@@ -11,10 +11,6 @@ MAX_STEP = 10
 NUM_QUANTITY = 10
 
 
-def get_description():
-    return DESCRIPTION
-
-
 def get_progression_question_and_answer():
     question = []
     start = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)

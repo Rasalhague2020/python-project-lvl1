@@ -7,7 +7,7 @@ from brain_games import engine
 
 def main():
     engine.play(progression.get_progression_question_and_answer,
-                progression.get_description)
+                progression.DESCRIPTION)
 
 
 if __name__ == '__main__':

@@ -6,10 +6,6 @@ MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
 
 
-def get_description():
-    return DESCRIPTION
-
-
 def is_even(number):
     return (number % 2) == 0
 
