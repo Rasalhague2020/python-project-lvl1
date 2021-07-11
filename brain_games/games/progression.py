@@ -18,8 +18,8 @@ def get_progression_question_and_answer():
     start = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     step = random.randint(MIN_STEP, MAX_STEP)
 
-    for i in range(NUM_QUANTITY - 1):
-        sequence.append(str(start + step * i))
+    for nth_term in range(NUM_QUANTITY - 1):
+        sequence.append(str(start + step * nth_term))
 
     answer = random.choice(sequence)
     question = sequence[:sequence.index(answer)]

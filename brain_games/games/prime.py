@@ -20,8 +20,8 @@ def get_prime_question_and_answer():
 
 def is_prime(number):
     if number > 1:
-        for i in range(2, (number // 2) + 1):
-            if number % i == 0:
+        for divisor in range(2, (number // 2) + 1):
+            if number % divisor == 0:
                 break
         else:
             return True
