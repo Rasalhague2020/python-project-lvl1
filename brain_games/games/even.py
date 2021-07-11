@@ -9,7 +9,7 @@ MAX_RANDOM_NUMBER = 100
 
 
 def is_even(number):
-    return not number % 2
+    return (number % 2) == 0
 
 
 def get_even_question_and_answer():
