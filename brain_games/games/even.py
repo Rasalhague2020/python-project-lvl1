@@ -1,11 +1,13 @@
 import random
 
-from brain_games import engine
-
 
 DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
+
+
+def get_description():
+    return DESCRIPTION
 
 
 def is_even(number):
@@ -19,7 +21,3 @@ def get_even_question_and_answer():
     else:
         answer = 'no'
     return str(question), answer
-
-
-def start_even_game():
-    engine.play(get_even_question_and_answer, DESCRIPTION)

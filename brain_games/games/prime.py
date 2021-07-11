@@ -1,12 +1,14 @@
 import random
 
-from brain_games import engine
-
 
 DESCRIPTION = ('Answer "yes" if given number is prime. '
                'Otherwise answer "no".')
 MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
+
+
+def get_description():
+    return DESCRIPTION
 
 
 def get_prime_question_and_answer():
@@ -25,7 +27,3 @@ def is_prime(number):
         if number % divisor == 0:
             return False
     return True
-
-
-def start_prime_game():
-    engine.play(get_prime_question_and_answer, DESCRIPTION)

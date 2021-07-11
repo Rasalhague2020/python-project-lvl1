@@ -1,7 +1,5 @@
 import random
 
-from brain_games import engine
-
 
 DESCRIPTION = 'What number is missing in the progression?'
 MIN_RANDOM_NUMBER = 1
@@ -11,6 +9,10 @@ MIN_STEP = 1
 MAX_STEP = 10
 
 NUM_QUANTITY = 10
+
+
+def get_description():
+    return DESCRIPTION
 
 
 def get_progression_question_and_answer():
@@ -26,7 +28,3 @@ def get_progression_question_and_answer():
     question[answer_index] = '..'
     question = ' '.join(question)
     return question, answer
-
-
-def start_progression_game():
-    engine.play(get_progression_question_and_answer, DESCRIPTION)

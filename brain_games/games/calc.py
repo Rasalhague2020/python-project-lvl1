@@ -1,12 +1,14 @@
 import random
 
-from brain_games import engine
-
 
 DESCRIPTION = 'What is the result of the expression?'
 MIN_RANDOM_NUMBER = 1
 MAX_RANDOM_NUMBER = 100
 OPERATORS = ['+', '-', '*']
+
+
+def get_description():
+    return DESCRIPTION
 
 
 def get_calc_question_and_answer():
@@ -27,7 +29,3 @@ def calculate(first_number, second_number, sign):
     if sign == '*':
         return first_number * second_number
     return None
-
-
-def start_calc_game():
-    engine.play(get_calc_question_and_answer, DESCRIPTION)

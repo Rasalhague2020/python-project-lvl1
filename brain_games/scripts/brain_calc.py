@@ -2,9 +2,11 @@
 
 from brain_games.games import calc
 
+from brain_games import engine
+
 
 def main():
-    calc.start_calc_game()
+    engine.play(calc.get_calc_question_and_answer, calc.get_description)
 
 
 if __name__ == '__main__':

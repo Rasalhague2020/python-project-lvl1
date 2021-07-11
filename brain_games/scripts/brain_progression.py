@@ -2,9 +2,12 @@
 
 from brain_games.games import progression
 
+from brain_games import engine
+
 
 def main():
-    progression.start_progression_game()
+    engine.play(progression.get_progression_question_and_answer,
+                progression.get_description)
 
 
 if __name__ == '__main__':
