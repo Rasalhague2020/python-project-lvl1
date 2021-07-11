@@ -1,5 +1,4 @@
 import random
-import operator
 
 from brain_games import engine
 
@@ -22,11 +21,11 @@ def get_calc_question_and_answer():
 
 def calculate(first_number, second_number, sign):
     if sign == '+':
-        return operator.add(first_number, second_number)
+        return first_number + second_number
     if sign == '-':
-        return operator.sub(first_number, second_number)
+        return first_number - second_number
     if sign == '*':
-        return operator.mul(first_number, second_number)
+        return first_number * second_number
     return None
 
 
