@@ -5,14 +5,14 @@ ATTEMPTS_COUNT = 3
 
 
 def play(get_game_question_and_answer, description):
-    current_attempts_count = ATTEMPTS_COUNT
+    current_attempts_count = 0
 
     print('Welcome to Brain Games!')
     print(f'{description}\n')
     user_name = prompt.string('May I have your name? ')
     print(f'Hello, {user_name}!\n')
 
-    while current_attempts_count:
+    for current_attempts_count in range(ATTEMPTS_COUNT):
         question, right_answer = get_game_question_and_answer()
         print('Question:', question)
         user_answer = prompt.string('Your answer: ')
@@ -23,6 +23,5 @@ def play(get_game_question_and_answer, description):
                   f'Let\'s try again, {user_name}!\n')
             exit()
         print('Correct!\n')
-        current_attempts_count -= 1
 
     print(f'Congratulations, {user_name}!')
