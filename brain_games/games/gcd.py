@@ -1,7 +1,5 @@
 import random
 
-from brain_games import engine
-
 
 DESCRIPTION = 'Find the greatest common division of given numbers.'
 MIN_RANDOM_NUMBER = 1
