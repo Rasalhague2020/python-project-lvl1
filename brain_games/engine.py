@@ -10,7 +10,7 @@ def play(get_game_question_and_answer, description):
     user_name = prompt.string('May I have your name? ')
     print(f'Hello, {user_name}!\n')
 
-    for current_attempts_count in range(ATTEMPTS_COUNT):
+    for _ in range(ATTEMPTS_COUNT):
         question, right_answer = get_game_question_and_answer()
         print('Question:', question)
         user_answer = prompt.string('Your answer: ')
@@ -22,4 +22,4 @@ def play(get_game_question_and_answer, description):
             return
         print('Correct!\n')
 
-    print(f'Congratulations, {user_name}!')12
+    print(f'Congratulations, {user_name}!')
