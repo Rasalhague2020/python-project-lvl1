@@ -14,17 +14,16 @@ NUM_QUANTITY = 10
 
 
 def get_progression_question_and_answer():
-    sequence = []
+    question = []
     start = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     step = random.randint(MIN_STEP, MAX_STEP)
 
-    for nth_term in range(NUM_QUANTITY - 1):
-        sequence.append(str(start + step * nth_term))
+    for nth_term in range(NUM_QUANTITY):
+        question.append(str(start + step * nth_term))
 
-    answer = random.choice(sequence)
-    question = sequence[:sequence.index(answer)]
-    question.append('..')
-    question += sequence[sequence.index(answer) + 1:]
+    answer_index = random.randint(0, NUM_QUANTITY - 1)
+    answer = question[answer_index]
+    question[answer_index] = '..'
     question = ' '.join(question)
     return question, answer
 
