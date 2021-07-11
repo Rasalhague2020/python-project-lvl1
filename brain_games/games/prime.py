@@ -19,13 +19,12 @@ def get_prime_question_and_answer():
 
 
 def is_prime(number):
-    if number > 1:
-        for divisor in range(2, (number // 2) + 1):
-            if number % divisor == 0:
-                break
-        else:
-            return True
-    return False
+    if number < 2:
+        return False
+    for divisor in range(2, (number // 2) + 1):
+        if number % divisor == 0:
+            return False
+    return True
 
 
 def start_prime_game():
